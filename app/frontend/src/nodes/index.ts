@@ -4,6 +4,7 @@ import { AgentNode } from './components/agent-node';
 import { InvestmentReportNode } from './components/investment-report-node';
 import { JsonOutputNode } from './components/json-output-node';
 import { PortfolioManagerNode } from './components/portfolio-manager-node';
+import { CustomAgentNode } from './components/custom-agent-node';
 import { type AppNode } from './types';
 
 // Types
@@ -52,4 +53,5 @@ export const nodeTypes = {
   'portfolio-manager-node': PortfolioManagerNode,
   'investment-report-node': InvestmentReportNode,
   'json-output-node': JsonOutputNode,
+  'custom-agent-node': CustomAgentNode,
 } satisfies NodeTypes;

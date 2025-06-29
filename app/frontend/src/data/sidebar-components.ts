@@ -8,7 +8,8 @@ import {
   LucideIcon,
   Monitor,
   Network,
-  Play
+  Play,
+  Settings
 } from 'lucide-react';
 import { Agent, getAgents } from './agents';
 
@@ -46,10 +47,13 @@ export const getComponentGroups = async (): Promise<ComponentGroup[]> => {
       name: "agents",
       icon: Bot,
       iconColor: "text-red-400",
-      items: agents.map((agent: Agent) => ({
-        name: agent.display_name,
-        icon: Bot
-      }))
+      items: [
+        ...agents.map((agent: Agent) => ({
+          name: agent.display_name,
+          icon: Bot
+        })),
+        { name: "Custom Agent", icon: Settings }
+      ]
     },
     {
       name: "swarms",

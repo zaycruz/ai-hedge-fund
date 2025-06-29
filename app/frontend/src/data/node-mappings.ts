@@ -47,6 +47,20 @@ const baseNodeTypeDefinitions: Record<string, NodeTypeDefinition> = {
       },
     }),
   },
+  "Custom Agent": {
+    createNode: (position: { x: number, y: number }): AppNode => ({
+      id: `custom-agent-node-${Date.now()}`,
+      type: "custom-agent-node",
+      position,
+      data: {
+        name: "Custom Agent",
+        description: "Configurable agent with tool support",
+        status: "Idle",
+        isNew: true,
+        tools: [],
+      },
+    }),
+  },
 };
 
 /**
